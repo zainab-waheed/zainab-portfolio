@@ -1,0 +1,214 @@
+:root {
+  --purple: purple;
+  --purple-light: rgba(106, 13, 173, 0.08);
+  --text-dark: #222;
+  --muted: #666;
+}
+
+/* Container with 2 columns, no center alignment of whole content */
+.contact-container {
+  display: flex;
+  justify-content: space-between; /* dono columns ke darmiyan max space */
+  align-items: flex-start;
+  padding: 120px 0; /* top bottom padding */
+  background-color: #fff;
+  color: var(--text-dark);
+  max-width: 1200px; /* width adjust kar sakte hain */
+}
+
+/* Left Side */
+.contact-info {
+  flex: 1;
+  min-width: 280px;
+  margin-left: 200px; /* left side margin */
+  text-align: left; /* center se left align kar diya */
+}
+
+.contact-info h1 {
+  font-size: 2.5rem;
+  color: var(--purple);
+  margin-bottom: 10px;
+  margin-top: 0; /* top margin hata diya taake header se gap consistent rahe */
+}
+
+.contact-info h3 {
+  font-size: 1.2rem;
+  color: var(--purple);
+  margin-bottom: 20px;
+}
+
+.contact-info p {
+  max-width: 400px;
+  color: var(--muted);
+  margin-bottom: 90px;
+}
+
+/* Right Side */
+.contact-form {
+  flex: 1;
+  min-width: 250px;
+  margin-right: 50px; /* right side margin */
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 400px;
+  margin-top: 80px; /* header se gap already container me hai */
+}
+
+.form-row {
+  display: flex;
+  gap: 10px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  min-width: 130px;
+  padding: 10px;
+  border: 1px solid var(--purple);
+  border-radius: 4px;
+  outline: none;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: var(--purple);
+  box-shadow: 0 0 5px var(--purple-light);
+}
+
+.contact-form button {
+  background-color: var(--purple);
+  color: #fff;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+  width: 30%;
+}
+
+.contact-form button:hover {
+  background-color: #500a8f;
+}
+
+/* Vertical stack wrapper for icon-email and icon-social rows */
+.icon-email-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+/* Each horizontal row: icon + link(s) aligned */
+.icon-row {
+  display: flex; /* vertical center alignment */
+  gap: 30px;
+}
+
+/* Icon style with white fill and purple border */
+.icon-with-border {
+  color: var(--purple);
+  border-radius: 4px;
+  padding: 6px;
+  font-size: 1.5rem;
+  box-sizing: content-box;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Email link styling */
+.email-link {
+  color: var(--purple);
+  font-size: 1rem;
+  text-decoration: none;
+  font-weight: 600;
+  user-select: text;
+}
+
+.email-link:hover {
+  text-decoration: underline;
+}
+.thumb-social-row {
+  display: flex;
+  align-items: center;   /* vertically center align */
+  gap: 8px;              /* thumb icon aur social icons ke beech gap */
+}
+/* Social icons container */
+.social-icons {
+  margin-left: 15px;
+  display: flex;
+  display: table-row;
+  margin-top: 3px;
+}
+
+/* Social icon colors */
+.social-icons a {
+  color: var(--purple);
+  font-size: 1.6rem;
+  transition: transform 0.2s ease;
+}
+
+.social-icons a:hover {
+  transform: scale(1.2);
+  color: 9932cc;
+}
+/* Animation keyframes */
+@keyframes fadeSlideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Animate elements on page load */
+.contact-info, .contact-form, .icon-email-wrapper, .icon-row, .email-link, .social-icons, .icon-with-border {
+  opacity: 0; /* initially invisible */
+  animation: fadeSlideUp 1s ease forwards;
+  animation-delay: 0.3s;
+}
+
+/* Stagger effect with different delays */
+.contact-info {
+  animation-delay: 0s;
+}
+
+.contact-info h1 {
+  animation-delay: 0.1s;
+}
+
+.contact-info h3 {
+  animation-delay: 0.2s;
+}
+
+.contact-info p {
+  animation-delay: 0.3s;
+}
+
+.icon-email-wrapper {
+  animation-delay: 0.4s;
+}
+
+.icon-row {
+  animation-delay: 0.5s;
+}
+
+.email-link {
+  animation-delay: 0.6s;
+}
+
+.thumb-social-row, .social-icons {
+  animation-delay: 0.7s;
+}
+
+.contact-form {
+  animation-delay: 0.8s;
+}
+
+.contact-form input,
+.contact-form textarea,
+.contact-form button {
+  animation-delay: 0.9s;
+}

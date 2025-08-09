@@ -1,0 +1,82 @@
+/* Home container animation */
+.home-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 100px 50px 50px;
+  min-height: 100vh;
+  background: white;
+  color: purple;
+  box-sizing: border-box;
+  animation: zoomInFromBack 1.2s ease-out forwards; /* Animation apply */
+}
+
+/* Zoom from back animation */
+@keyframes zoomInFromBack {
+  0% {
+    transform: scale(0.2); /* chhota start */
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.05); /* thoda bada for pop effect */
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(1); /* normal size */
+    opacity: 1;
+  }
+}
+
+/* Left Section */
+.left {
+  max-width: 50%;
+}
+
+/* Heading */
+.left h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+/* Paragraph */
+.left p {
+  font-size: 18px;
+  margin-bottom: 25px;
+}
+
+/* Icons */
+.icons a {
+  font-size: 32px;
+  margin-right: 15px;
+  color: purple;
+}
+.icons a:hover {
+  color: #9932cc; /* Darker purple on hover */
+  transform: scale(1.1); /* Slightly enlarge on hover */
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+/* Buttons */
+.buttons button {
+  margin-right: 25px;
+  background-color: purple;
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 15px;
+}
+.buttons button:hover {
+  background-color: #9932cc; /* Darker purple on hover */
+  transform: scale(1.05); /* Slightly enlarge on hover */
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Image */
+.right img {
+  width: 300px;
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  animation: zoomInFromBack 1.5s ease-out forwards; /* Image pe bhi zoom animation */
+}

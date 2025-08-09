@@ -1,0 +1,40 @@
+import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
+import './Header.css';
+
+const Header = () => {
+  const [darkMode, setDarkMode] = useState(false);
+
+  // Apply theme when darkMode changes
+  useEffect(() => {
+    document.body.classList.toggle('dark-theme', darkMode);
+  }, [darkMode]);
+
+  return (
+    <header className="header">
+      {/* Logo */}
+      <div className="logo">ZC</div>
+
+      {/* Navigation */}
+      <nav className="nav-links">
+        <Link to="/">Home</Link>
+        <Link to="/about">About</Link>
+        <Link to="/skills">Skills</Link>
+        <Link to="/projects">Projects</Link>
+        <Link to="/contact">Contact</Link>
+
+        {/* Theme Toggle Switch */}
+        <label className="switch">
+          <input
+            type="checkbox"
+            onChange={() => setDarkMode(!darkMode)}
+            checked={darkMode}
+          />
+          <span className="slider"></span>
+        </label>
+      </nav>
+    </header>
+  );
+};
+
+export default Header;
