@@ -4,6 +4,7 @@ import "./Projects.css";
 import portfolioImg from "../assets/portfolio.png";
 import secondProjectImg from "../assets/project2.png";
 import thirdProjectImg from "../assets/project3.png";
+import carBarrierImg from "../assets/project4.png"; // apni image add kar lena assets folder me
 
 const Projects = () => {
   const projectData = [
@@ -41,6 +42,15 @@ Super Admin Portal with full access and control over the system.
 The project enhanced my skills in UI design, backend development, and real-time data handling, while improving
  my problem-solving abilities and understanding of large-scale system design.
 `
+    },
+    {
+      id: 4,
+      title: "Car Barrier Project",
+      img: carBarrierImg,
+      desc: `Developed an automated Car Barrier System with sensor-based detection. The system detects when
+      a car arrives and automatically opens the barrier gate for parking. Implemented sensor integration for 
+      real-time response and ensured smooth gate operation. This project improved my understanding of embedded
+      systems, automation, and hardware-software interaction.`
     }
   ];
 

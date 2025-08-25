@@ -42,16 +42,16 @@
 
 .social-icons {
   display: flex;            /* icons ko horizontally align karo */
-  gap: 15px;                /* icons ke darmiyan gap */
+  gap: 500px;                /* icons ke darmiyan gap */
   justify-content: center;  /* container ke andar center */
-              /* margin hatao agar ho */
 }
 
 .social-icons a {
   font-size: 28px;
   color: purple;
   transition: color 0.3s ease;
-  margin: 0;                /* extra margins hatao */
+  margin: 0 6px;                /* extra margins hatao */
+
 }
 
 .social-icons a:hover {
@@ -146,3 +146,29 @@
   color: purple;
   padding-left: 24px; /* Icon ke neeche na aaye, text align rahe */
 }
+@media (max-width: 768px) {
+  .about-container {
+    flex-direction: column;
+    padding: 24px 16px;
+    text-align: center;
+  }
+  .about-right {
+    padding-left: 0;
+    margin-top: 16px;
+  }
+  .about-img {
+    width: 180px; height: 180px;
+  }
+  .about-name { margin-bottom: 8px; }
+  .social-icons {
+    gap: 12px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .about-details {
+    flex-direction: column;
+    gap: 16px;
+    text-align: left; /* readable lists */
+  }
+}
+

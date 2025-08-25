@@ -1,5 +1,5 @@
 .header {
-  background-color: plum;
+  background: linear-gradient(90deg, white, purple, plum, black);;
   color: purple;
   display: flex;
   align-items: center;
@@ -37,7 +37,7 @@
 .nav-links a {
   margin-left: 20px;
   text-decoration: none;
-  color: purple;
+  color: white;
   font-weight: 500;
 }
 
@@ -48,7 +48,7 @@
 
 /* Dark Theme Hover */
 body.dark-theme .nav-links a:hover {
-  color: plum; /* Light purple for visibility on dark */
+  color: #9932cc; /* Light purple for visibility on dark */
 }
 
 
@@ -107,7 +107,7 @@ body.dark-theme {
 }
 
 body.dark-theme .header {
-  background-color: #333;
+ background: linear-gradient(90deg, white, purple, plum, black);
   color: white;
 }
 

@@ -50,8 +50,8 @@ const About = () => {
 
         {/* Download CV Button */}
         <a
-          href="/Zainab_CV.pdf" // public folder me CV ka naam yeh rakho
-          download="Zainab_CV.pdf"
+          href="/Zainab(cv).pdf" // public folder me CV ka naam yeh rakho
+          download="Zainab(cv).pdf"
           target="_blank"
           rel="noreferrer"
           className="cv-button"
@@ -66,6 +66,7 @@ const About = () => {
               <li>MEARN Stack</li>
               <li>Book Reader</li>
               <li>Frontend Design</li>
+              <li>UI|UX Design</li>
             </ul>
           </div>
 

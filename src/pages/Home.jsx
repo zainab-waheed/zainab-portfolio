@@ -21,7 +21,7 @@ const Home = () => {
       transition={{ duration: 1 }}
     >
       <div className="left">
-        <h1>Hi! My self Zainab Ch</h1>
+        <h1 >Hi! My self Zainab </h1>
         <p>I am a Junior Frontend Developer and interested in UI | UX development. I love building clean user-friendly interfaces.</p>
         
         <div className="icons">
