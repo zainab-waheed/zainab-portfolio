@@ -2,26 +2,26 @@ import React from "react";
 import "./Skills.css";
 
 // My Skills
-import htmlImg from "../assets/html.png";
-import cssImg from "../assets/css.png";
-import jsImg from "../assets/js.png";
-import reactImg from "../assets/react.png";
-import nodeImg from "../assets/nodejs.png";
-import mongoImg from "../assets/mongodb.png";
+import htmlImg from "../assets/html.gif";
+import cssImg from "../assets/css2.gif";
+import jsImg from "../assets/java.gif";
+import reactImg from "../assets/react.gif";
+import nodeImg from "../assets/nj.gif";
+import mongoImg from "../assets/mon.gif";
 
 // Other Skills
-import figmaImg from "../assets/figma.png";
-import cppImg from "../assets/cpp.png";
-import pythonImg from "../assets/python.png";
+import figmaImg from "../assets/figma2.gif";
+import cppImg from "../assets/c++.gif";
+import pythonImg from "../assets/py.gif";
 
 // Currently Learning
-import phpImg from "../assets/php.png";
-import angularImg from "../assets/angular.png";
-import expressImg from "../assets/expressjs.png";
+import phpImg from "../assets/php.gif";
+import angularImg from "../assets/ang.gif";
+import expressImg from "../assets/ex.gif";
 
 const skills = [
-  { name: "HTML", img: htmlImg, level: 98, desc: "Semantic, accessible markup and responsive layouts." },
-  { name: "CSS", img: cssImg, level: 94, desc: "Responsive design, Flexbox, Grid and modern styling." },
+  { name: "HTML", img: htmlImg, level: 98, desc: "Semantic and responsive layouts." },
+  { name: "CSS", img: cssImg, level: 94, desc: "Responsive design, Grid and modern styling." },
   { name: "JavaScript", img: jsImg, level: 75, desc: "DOM, ES6+, async patterns and vanilla JS." },
   { name: "React", img: reactImg, level: 88, desc: "Components, hooks, state and routing." },
   { name: "Node.js", img: nodeImg, level: 80, desc: "Basic APIs, Express and server-side logic." },
@@ -29,7 +29,7 @@ const skills = [
 ];
 
 const otherSkills = [
-  { name: "Figma", img: figmaImg, level: 85, desc: "UI/UX design, wireframes, prototypes and components." },
+  { name: "Figma", img: figmaImg, level: 85, desc: "UI/UX design, prototypes and components." },
   { name: "C++", img: cppImg, level: 70, desc: "OOP, data structures, and algorithms." },
   { name: "Python", img: pythonImg, level: 65, desc: "Scripting, data handling, and automation." }
 ];

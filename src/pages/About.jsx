@@ -2,8 +2,7 @@ import React from "react";
 import "./About.css";
 import { FaLinkedin, FaGithub, FaInstagram, FaGraduationCap } from "react-icons/fa";
 import { motion } from "framer-motion";
-import profileImage from "../assets/about.jpg";
-
+import profileImage from "../assets/about2.gif";
 const About = () => {
   return (
     <motion.div
@@ -40,8 +39,8 @@ const About = () => {
 
       {/* Right Side */}
       <div className="about-right">
-        <h2>About Me</h2>
-        <p>
+        <h2>Who am I?</h2>
+        <p >
           I am a passionate Junior Web Developer with a strong interest in UI/UX design and a dedication to building modern,
           user-friendly and visually appealing websites. I have hands on experience in designing interactive interfaces
           on Figma and have successfully worked on multiple web projects. My development journey includes working extensively

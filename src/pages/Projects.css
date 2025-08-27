@@ -1,15 +1,17 @@
 .projects-container {
-  padding: 40px;
-  background-color: #f9f9f9;
+  padding: 100px 40px 40px;
 }
 
-/* Heading Animation */
+/* Gradient Heading */
 .projects-heading {
   text-align: center;
-  font-size: 2.5rem;
-  margin-bottom: 10px;
-  color: purple;
-  opacity: 0;
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+  background: linear-gradient(270deg, #ff6ec4, #4ade80, blue, yellow);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-transform: uppercase;
   animation: slideDown 0.8s ease-in-out forwards;
 }
 
@@ -18,11 +20,32 @@
   text-align: center;
   max-width: 700px;
   margin: 0 auto 40px;
-  color: purple;
+  color: palevioletred;
   font-size: 1rem;
-  opacity: 0;
   animation: slideDown 0.8s ease-in-out forwards;
   animation-delay: 0.2s;
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeUp {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 /* Grid Layout */
@@ -32,31 +55,38 @@
   gap: 30px;
 }
 
-/* Card Animation */
+/* Card */
 .project-card {
-  background: whitesmoke;
+  background: rgba(255, 255, 255, 0.05);
   border-radius: 10px;
   overflow: hidden;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(6px);
   transform: translateY(30px);
   opacity: 0;
   transition: all 0.3s ease-in-out;
   animation: fadeUp 0.8s ease-in-out forwards;
-}
-/* Card Hover */
-.project-card:hover {
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
-  transform: translateY(-8px);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* ✅ sab content center align */
 }
 
+/* Card Hover */
+.project-card:hover {
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.35);
+  transform: translateY(-8px);
+}
+
+/* Image Center Fix */
 .project-image {
   width: 90%;
   height: 170px;
   object-fit: cover;
   padding: 10px;
-  border-radius: 6px;  
-  margin: 5px 8px;
+  border-radius: 6px;
+  display: block;
+  margin: 0 auto; /* ✅ horizontally center */
 }
 
 .project-title {
@@ -67,71 +97,56 @@
   margin-bottom: 1px;
 }
 
-
-/* Description */
 .project-desc {
-  padding: 0px 20px; 
+  padding: 0px 20px;
   text-align: justify;
   font-size: 0.95rem;
-  color: #444;
+  color: #ddd;
   line-height: 1.5;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-  .project-image {
-    height: 180px;
-  }
+.project-role {
+  text-align: center;
+  color: #facc15;
+  font-size: 0.9rem;
+  margin: 5px 0;
 }
 
-/* Animations */
-@keyframes slideDown {
-  from {
-    opacity: 0;
-    transform: translateY(-20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+.project-tools {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  margin: 10px 0;
 }
 
-@keyframes fadeUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+.tool-badge {
+  background: linear-gradient(135deg, #ff6ec4, #7873f5);
+  color: white;
+  font-size: 0.75rem;
+  padding: 4px 10px;
+  border-radius: 12px;
 }
-@media (max-width: 768px) {
-  .projects-container { padding: 24px 16px; }
-  .projects-heading { font-size: 1.8rem; }
-  .projects-intro { margin: 0 auto 20px; font-size: 0.95rem; }
 
-  .projects-grid {
-    grid-template-columns: 1fr;  /* one column */
-    gap: 16px;
-  }
+.project-links {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin: 15px 0;
+}
 
-  .project-card { border-radius: 12px; }
+.project-links a {
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: bold;
+  color: white;
+  background: #4ade80;
+  padding: 6px 12px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
 
-  .project-image {
-    height: 150px;
-    padding: 8px;
-    margin: 4px auto 0;
-  }
-
-  .project-title {
-    font-size: 1.1rem;
-    margin: 8px 0 4px; /* title-paragraph gap tight */
-  }
-
-  .project-desc {
-    padding: 10px 14px;
-    font-size: 0.95rem;
-    margin-top: 0;      /* extra gap remove */
-  }
+.project-links a:hover {
+  background: #ff6ec4;
+  color: #fff;
 }

@@ -1,5 +1,4 @@
 .header {
-  background: linear-gradient(90deg, white, purple, plum, black);;
   color: purple;
   display: flex;
   align-items: center;
@@ -15,7 +14,6 @@
 
 /* Logo */
 .logo {
-  background-color: white;
   color: purple;
   border-radius: 50%;
   width: 45px;
@@ -43,14 +41,16 @@
 
 /* Light Theme Hover */
 .nav-links a:hover {
-  color: #9932cc;
+  color: #4ade80;
 }
 
 /* Dark Theme Hover */
 body.dark-theme .nav-links a:hover {
-  color: #9932cc; /* Light purple for visibility on dark */
+  color: #4ade80;
 }
-
+body.light-theme .nav-links a:hover {
+  color: #4ade80;
+}
 
 /* Toggle Switch */
 .switch {
@@ -99,35 +99,56 @@ input:checked + .slider:before {
   transform: translateX(26px);
 }
 
-/* GLOBAL DARK THEME (Applied to whole site) */
-body.dark-theme {
-  background-color: #1a1a1a;
-  color: white;
-  transition: background-color 0.3s ease, color 0.3s ease;
-}
+/* ===== THEME STYLES ===== */
+
+/* Dark Theme (Default) */
 
 body.dark-theme .header {
- background: linear-gradient(90deg, white, purple, plum, black);
-  color: white;
+  background: linear-gradient(270deg, #ff6ec4,  #4ade80);
+  color: black;
 }
 
 body.dark-theme .nav-links a {
-  color: white;
+  color: black;
 }
 
 body.dark-theme .logo {
-  background-color: white;
-  color: #1a1a1a;
+  color: black;
 }
 
-/* Apply dark theme to all sections */
+/* Light Theme */
+
+body.light-theme .header {
+  background: linear-gradient(270deg, #ff6ec4, #7873f5, #4ade80, #ff6ec4);
+  color: purple;
+}
+
+body.light-theme .nav-links a {
+  color: black;
+}
+
+body.light-theme .logo {
+  color: black;
+}
+
+/* Apply theme to all sections */
 body.dark-theme section,
 body.dark-theme .home-container,
 body.dark-theme .about-container,
 body.dark-theme .skills-container,
 body.dark-theme .projects-container,
 body.dark-theme .contact-container {
-  background-color: #1a1a1a;
-  color: white;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  background: linear-gradient(black);
+}
+
+
+
+body.light-theme section,
+body.light-theme .home-container,
+body.light-theme .about-container,
+body.light-theme .skills-container,
+body.light-theme .projects-container,
+body.light-theme .contact-container {
+  background-color: white;
+  color: black;
 }

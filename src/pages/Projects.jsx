@@ -4,74 +4,94 @@ import "./Projects.css";
 import portfolioImg from "../assets/portfolio.png";
 import secondProjectImg from "../assets/project2.png";
 import thirdProjectImg from "../assets/project3.png";
-import carBarrierImg from "../assets/project4.png"; // apni image add kar lena assets folder me
+import carBarrierImg from "../assets/project4.png";
+import obstacleImg from "../assets/pic5.jpg";
+import ecomrcImg from "../assets/pic6.png";
 
 const Projects = () => {
   const projectData = [
     {
       id: 1,
-      title: "My Porfolio React Project",
+      title: "My Portfolio Website",
       img: portfolioImg,
-      desc: `Developed a React.js-based personal portfolio with a focus on modern UI and responsive design. 
-      Organized the src directory into three folders: assets (for storing images), components (including social links and header)
-      and pages (for navigation). Created an engaging, mobile-friendly interface to showcase my skills, projects
-      and contact information in a clean and professional layout.`
+      role: "Frontend Developer | React Enthusiast",
+      tools: ["React", "JavaScript", "GitHub"],
+      desc: "A personal portfolio showcasing my frontend development skills with React, smooth scrolling navigation, and responsive design."
     },
     {
       id: 2,
       title: "Hostel Management System",
       img: secondProjectImg,
-      desc: `Developed a C++-based Hostel Management System using <iostream>, <fstream>, and <string> libraries.
-       Implemented an object-oriented approach by creating classes and subclasses to handle different hostel operations.
-       Integrated switch statements within classes to execute functions based on user choices. Designed a menu-driven
-       interface in the main() function for seamless navigation, allowing users to perform tasks like room allocation,
-       student record management and data storage. This project strengthened my skills in OOP, file handling, and
-       user interface design in C++.`
+      role: "Coding",
+      tools: ["C++"],
+      desc: "A web-based system to manage hostel operations, including room allocation, student management, and fee tracking with secure authentication."
     },
     {
       id: 3,
       title: "Final Year Project",
       img: thirdProjectImg,
-      desc: `Transport Management System – Final Year Project
-Developed a full-stack Transport Management System for Superior University during my 6th and 7th semesters. The system aimed to make university transport more efficient and organized for both students and administrators.
-Key features included:
-Login Page as the entry point.
-Student Portal with dashboard, bus timings, routes, invoices, and maps.
-Admin Portal for bus details, schedule updates, and student data management.
-Super Admin Portal with full access and control over the system.
-The project enhanced my skills in UI design, backend development, and real-time data handling, while improving
- my problem-solving abilities and understanding of large-scale system design.
-`
+      role: "Team Lead | Software Engineer",
+      tools: ["React", "Django", "REST API", "PostgreSQL"],
+      desc: "An AI-powered web app built as a final year project, focusing on intelligent recommendations and user-friendly dashboards."
     },
     {
       id: 4,
-      title: "Car Barrier Project",
+      title: "Car Barrier System",
       img: carBarrierImg,
-      desc: `Developed an automated Car Barrier System with sensor-based detection. The system detects when
-      a car arrives and automatically opens the barrier gate for parking. Implemented sensor integration for 
-      real-time response and ensured smooth gate operation. This project improved my understanding of embedded
-      systems, automation, and hardware-software interaction.`
+      role: "IoT Developer",
+      tools: ["Arduino", "C++", "Sensors", "Motor Driver","Jumper-Wires"],
+      desc: "An IoT-based smart car barrier system using Arduino and sensors to automate vehicle access management in parking lots."
+    },
+    {
+      id: 5,
+      title: "Obstacle Avoidence",
+      img: obstacleImg,
+      role: "IoT Developer",
+      tools: ["Arduino UNO", "IR Sensors", "Motor Driver (L298N)", "DC Motors"],
+      desc: "An IoT-powered track detection and obstacle avoidance car designed to sense paths using IR sensors and move accordingly"
+    },
+    {
+      id: 6,
+      title: "Ecommerce Website",
+      img: ecomrcImg,
+      role: "Frontend Web Developer",
+      tools: ["HTML5", "CSS3", "JavaScript"],
+      desc: "A responsive clothing store website built using HTML, CSS, and JavaScript, featuring product listings, category filters, and a dynamic shopping cart."
     }
+  
   ];
-
+  const shadowColors = ["#ff6ec4", "#4ade80", "#7873f5", "#facc15"];
   return (
     <div className="projects-container">
       <h2 className="projects-heading">My Work</h2>
-      <p className="projects-intro">
-        Below are some of my projects
-      </p>
+      <p className="projects-intro">Below are some of my highlighted projects</p>
 
       <div className="projects-grid">
         {projectData.map((project, index) => (
           <div
             key={project.id}
             className="project-card"
-            style={{ animationDelay: `${index * 0.2 + 0.3}s` }} // animation delay
+            style={{
+              animationDelay: `${index * 0.2 + 0.3}s`,
+              boxShadow: `0 8px 20px ${shadowColors[index % shadowColors.length]}`
+            }}
           >
             <img src={project.img} alt={project.title} className="project-image" />
             <h3 className="project-title">{project.title}</h3>
-            <div className="project-desc">
-              <p>{project.desc}</p>
+            
+            <p className="project-role">{project.role}</p>
+
+            <div className="project-tools">
+              {project.tools.map((tool, i) => (
+                <span key={i} className="tool-badge">{tool}</span>
+              ))}
+            </div>
+
+            <p className="project-desc">{project.desc}</p>
+
+            <div className="project-links">
+              <a href={project.demo} target="_blank" rel="noreferrer">🌐 Demo</a>
+              <a href={project.code} target="_blank" rel="noreferrer">💻 Code</a>
             </div>
           </div>
         ))}

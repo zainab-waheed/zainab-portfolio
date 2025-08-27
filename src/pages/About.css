@@ -4,18 +4,34 @@
   align-items: center;
   padding: 30px 50px;
   min-height: 100vh;
-  background-color: white;
+  background-color: black;
   color: purple;
+
+  /* Default state (hidden) */
   opacity: 0;
-  transform: translateY(50px);
-  transition: all 0.8s ease-in-out;
+  transform: translateY(60px) scale(0.95);
 }
 
+/* Jab animate-about class add hogi */
 .about-container.animate-about {
-  opacity: 1;
-  transform: translateY(0);
+  animation: aboutZoomIn 1s ease forwards;
 }
 
+/* Single animation (fade + slide + zoom + bounce) */
+@keyframes aboutZoomIn {
+  0% {
+    opacity: 0;
+    transform: translateY(60px) scale(0.95);
+  }
+  60% {
+    opacity: 1;
+    transform: translateY(-8px) scale(1.02); /* bounce feel */
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
 .about-left {
   flex: 1;
   display: flex;            /* flex container banao */
@@ -28,34 +44,36 @@
   width: 250px;
   height: 250px;
   border-radius: 50%;
-  border: 4px solid purple;
+  border: linear-gradient(270deg, #ff6ec4, #4ade80,);
   box-shadow: 0 0 15px rgba(128, 0, 128, 0.3);
   margin-bottom: 10px;      /* image aur naam ke beech gap */
 }
 
 .about-name {
   font-size: 22px;
-  color: purple;
+  color: #ff6ec4;
   font-weight: bold;
   margin-bottom: 10px;      /* naam aur icons ke beech gap */
+  background: linear-gradient(270deg, #ff6ec4, #7873f5, #4ade80, #ff6ec4);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .social-icons {
   display: flex;            /* icons ko horizontally align karo */
   gap: 500px;                /* icons ke darmiyan gap */
-  justify-content: center;  /* container ke andar center */
+  justify-content: center; /* container ke andar center */
 }
 
 .social-icons a {
   font-size: 28px;
-  color: purple;
   transition: color 0.3s ease;
   margin: 0 6px;                /* extra margins hatao */
-
+  color: yellowgreen !important;
 }
 
 .social-icons a:hover {
-  color: #9932cc;
+  color: yellow !important;
 }
 
 
@@ -66,7 +84,7 @@
 
 .about-right h2 {
   font-size: 32px;
-  color: purple;
+  color: #ff6ec4;
   margin-bottom: 6px; /* Heading aur paragraph ka gap kam kiya */
 }
 
@@ -79,18 +97,22 @@
 
 .cv-button {
   display: inline-block;
-  background-color: purple;
+  background: linear-gradient(90deg, #4ade80, #ff6ec4); /* gradient lagao */
   color: white;
-  padding: 8px 18px;
+  padding: 10px 22px;
   border-radius: 6px;
   text-decoration: none;
   margin-bottom: 0px;
-  transition: background 0.3s ease;
+  transition: all 0.3s ease;
+  border: none;        /* border remove */
+  font-weight: bold;
 }
 
 .cv-button:hover {
-  background-color: #9932cc;
+  background: linear-gradient(90deg, #ff6ec4, #4ade80); /* hover pe reverse */
+  transform: scale(1.05); /* thoda zoom effect */
 }
+
 
 .about-details {
   display: flex;
@@ -105,7 +127,7 @@
 
 .about-details h3 {
   font-size: 20px;
-  color: purple;
+  color: palevioletred;
   font-weight: 700;
   margin-bottom: 0;
 }
@@ -136,14 +158,14 @@
 
 .edu-icon {
   font-size: 18px;
-  color: purple;
+  color: palevioletred;
   flex-shrink: 0;
 }
 
 .edu-item p {
   margin: 0;
   font-size: 14px;
-  color: purple;
+  color: palevioletred;
   padding-left: 24px; /* Icon ke neeche na aaye, text align rahe */
 }
 @media (max-width: 768px) {
