@@ -32,7 +32,7 @@
 }
 .contact-info p {
   max-width: 400px;
-  color: var(--muted);
+  color: palevioletred;
   margin-bottom: 90px;
 } /* Right Side */
 .contact-form {
@@ -98,7 +98,7 @@
   gap: 30px;
 } /* Icon style with white fill and purple border */
 .icon-with-border {
-  color: lightseagreen; 
+  color: palevioletred; 
   border-radius: 4px;
   padding: 6px;
   font-size: 1.5rem;
@@ -117,7 +117,7 @@
   text-decoration: underline;
 }
 .location-icon {
-  color: lightseagreen;
+  color: palevioletred;
 }
 
 .location-text {

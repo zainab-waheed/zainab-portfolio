@@ -7,13 +7,12 @@
 /* Section styling */
 .skill-section {
   padding: 50px 100px;
-  color: var(--text);
+  color: var(--palevioletred);
 }
 
 .heading {
   text-align: center;
   font-size: 36px;
-  color: palevioletred;
   text-transform: capitalize;
   font-weight: 600;
   margin-bottom: 20px;
@@ -61,7 +60,6 @@
                  linear-gradient(#fff 0 0);
   -webkit-mask-composite: xor;
           mask-composite: exclude;
-  opacity: 0;
   transition: opacity 0.3s ease;
   z-index: -1;
 }
@@ -134,7 +132,7 @@
 
 .skill-info {
   font-size: 14px;
-  color: var(--muted);
+  color: palevioletred;
   line-height: 1.5;
   margin: 10px 0px;
   padding-bottom: 10px;

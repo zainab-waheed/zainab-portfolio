@@ -1,8 +1,7 @@
 .header {
-  color: purple;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   padding: 0 40px;
   position: fixed;
   height: 70px;
@@ -10,128 +9,34 @@
   z-index: 1000;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   box-sizing: border-box;
+} 
+.header.hide {
+  top: -80px; /* hide header */
 }
 
-/* Logo */
-.logo {
-  color: purple;
-  border-radius: 50%;
-  width: 45px;
-  height: 45px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-weight: bold;
-  font-size: 16px;
-  border: 2px solid purple;
+.header.show {
+  top: 0; /* show header */
 }
-
-/* Nav Links */
+ /* Nav Links */
 .nav-links {
   display: flex;
   align-items: center;
 }
-
 .nav-links a {
   margin-left: 20px;
   text-decoration: none;
   color: white;
   font-weight: 500;
-}
-
-/* Light Theme Hover */
-.nav-links a:hover {
-  color: #4ade80;
-}
-
-/* Dark Theme Hover */
+}  /* Dark Theme Hover */
 body.dark-theme .nav-links a:hover {
   color: #4ade80;
 }
-body.light-theme .nav-links a:hover {
-  color: #4ade80;
-}
 
-/* Toggle Switch */
-.switch {
-  margin-left: 30px;
-  position: relative;
-  display: inline-block;
-  width: 50px;
-  height: 24px;
-}
-
-.switch input {
-  opacity: 0;
-  width: 0;
-  height: 0;
-}
-
-.slider {
-  position: absolute;
-  cursor: pointer;
-  background-color: #ccc;
-  border-radius: 24px;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  transition: .4s;
-}
-
-.slider:before {
-  position: absolute;
-  content: "";
-  height: 18px;
-  width: 18px;
-  left: 3px;
-  bottom: 3px;
-  background-color: white;
-  border-radius: 50%;
-  transition: .4s;
-}
-
-input:checked + .slider {
-  background-color: purple;
-}
-
-input:checked + .slider:before {
-  transform: translateX(26px);
-}
-
-/* ===== THEME STYLES ===== */
-
-/* Dark Theme (Default) */
-
-body.dark-theme .header {
-  background: linear-gradient(270deg, #ff6ec4,  #4ade80);
-  color: black;
-}
 
 body.dark-theme .nav-links a {
-  color: black;
+  color: white;
 }
-
-body.dark-theme .logo {
-  color: black;
-}
-
-/* Light Theme */
-
-body.light-theme .header {
-  background: linear-gradient(270deg, #ff6ec4, #7873f5, #4ade80, #ff6ec4);
-  color: purple;
-}
-
-body.light-theme .nav-links a {
-  color: black;
-}
-
-body.light-theme .logo {
-  color: black;
-}
-
-/* Apply theme to all sections */
+ /* Apply theme to all sections */
 body.dark-theme section,
 body.dark-theme .home-container,
 body.dark-theme .about-container,
@@ -141,14 +46,3 @@ body.dark-theme .contact-container {
   background: linear-gradient(black);
 }
 
-
-
-body.light-theme section,
-body.light-theme .home-container,
-body.light-theme .about-container,
-body.light-theme .skills-container,
-body.light-theme .projects-container,
-body.light-theme .contact-container {
-  background-color: white;
-  color: black;
-}

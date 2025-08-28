@@ -39,7 +39,7 @@ const About = () => {
 
       {/* Right Side */}
       <div className="about-right">
-        <h2>Who am I?</h2>
+        <h2>Who I am?</h2>
         <p >
           I am a passionate Junior Web Developer with a strong interest in UI/UX design and a dedication to building modern,
           user-friendly and visually appealing websites. I have hands on experience in designing interactive interfaces
@@ -55,7 +55,7 @@ const About = () => {
           rel="noreferrer"
           className="cv-button"
         >
-          Download My CV
+          GET RESUME
         </a>
 
         <div className="about-details">

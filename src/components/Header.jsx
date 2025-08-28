@@ -1,19 +1,37 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import './Header.css';
 
 const Header = () => {
-  const [darkMode, setDarkMode] = useState(true);
+  // Dark theme by default
+  const darkMode = true;
+
+  const [showHeader, setShowHeader] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
 
   useEffect(() => {
     document.body.classList.toggle('dark-theme', darkMode);
     document.body.classList.toggle('light-theme', !darkMode);
   }, [darkMode]);
 
-  return (
-    <header className="header">
-      <div className="logo">ZC</div>
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > lastScrollY) {
+        // scrolling down → hide header
+        setShowHeader(false);
+      } else {
+        // scrolling up → show header
+        setShowHeader(true);
+      }
+      setLastScrollY(window.scrollY);
+    };
 
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [lastScrollY]);
+
+  return (
+    <header className={`header ${showHeader ? "show" : "hide"}`}>
       <nav className="nav-links">
         <Link to="/">Home</Link>
         <Link to="/about">About</Link>
@@ -21,15 +39,6 @@ const Header = () => {
         <Link to="/projects">Projects</Link>
         <Link to="/experience">Experience</Link>
         <Link to="/contact">Contact</Link>
-
-        <label className="switch">
-          <input
-            type="checkbox"
-            onChange={() => setDarkMode(!darkMode)}
-            checked={!darkMode}
-          />
-          <span className="slider"></span>
-        </label>
       </nav>
     </header>
   );
