@@ -7,7 +7,9 @@ import cssImg from "../assets/css2.gif";
 import jsImg from "../assets/java.gif";
 import reactImg from "../assets/react.gif";
 import nodeImg from "../assets/nj.gif";
-import mongoImg from "../assets/mon.gif";
+import mongoImg from "../assets/mongo.gif";
+import supaImg from "../assets/supa.gif";
+import cvImg from "../assets/cv.gif";
 
 // Other Skills
 import figmaImg from "../assets/figma2.gif";
@@ -25,7 +27,9 @@ const skills = [
   { name: "JavaScript", img: jsImg, level: 75, desc: "DOM, ES6+, async patterns and vanilla JS." },
   { name: "React", img: reactImg, level: 88, desc: "Components, hooks, state and routing." },
   { name: "Node.js", img: nodeImg, level: 80, desc: "Basic APIs, Express and server-side logic." },
-  { name: "MongoDB", img: mongoImg, level: 60, desc: "CRUD, collections and basic schema design." }
+  { name: "MongoDB", img: mongoImg, level: 60, desc: "CRUD, collections and basic schema design." },
+  { name: "SupaBase", img: supaImg, level: 55, desc: "Authentication, table manage, database schema." },
+  { name: "Computer Vision", img: cvImg, level: 50, desc: "Image processing, object detection, feature extraction." }
 ];
 
 const otherSkills = [

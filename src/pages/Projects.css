@@ -117,11 +117,12 @@
 }
 
 .tool-badge {
-  background: linear-gradient(135deg, #ff6ec4, #7873f5);
-  color: white;
+  background: transparent;   /* background remove */
+  color: white;              /* text color */
   font-size: 0.75rem;
   padding: 4px 10px;
   border-radius: 12px;
+  border: 1px solid gray;  /* sirf border ka colour */
 }
 
 .project-links {
@@ -134,15 +135,15 @@
 .project-links a {
   text-decoration: none;
   font-size: 0.85rem;
-  font-weight: bold;
-  color: black;
-  background: #4ade80;
+  color: white;
+  background: transparent;
   padding: 6px 12px;
   border-radius: 8px;
   transition: all 0.3s ease;
+  border: 1px solid gray;
 }
 
 .project-links a:hover {
-  background: #ff6ec4;
+  background: palevioletred;
   color: #fff;
 }

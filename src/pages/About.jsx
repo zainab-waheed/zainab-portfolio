@@ -1,6 +1,6 @@
 import React from "react";
 import "./About.css";
-import { FaLinkedin, FaGithub, FaInstagram, FaGraduationCap } from "react-icons/fa";
+import { FaLinkedin, FaGithub, FaGraduationCap } from "react-icons/fa";
 import { motion } from "framer-motion";
 import profileImage from "../assets/about2.gif";
 const About = () => {
@@ -26,13 +26,6 @@ const About = () => {
           </a>
           <a href="https://github.com/zainab-waheed" target="_blank" rel="noreferrer">
             <FaGithub />
-          </a>
-          <a
-            href="https://www.instagram.com/_zainab_ch/"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <FaInstagram />
           </a>
         </div>
       </div>

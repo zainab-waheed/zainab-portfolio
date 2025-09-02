@@ -2,6 +2,7 @@ import React from "react";
 import "./Projects.css";
 
 import portfolioImg from "../assets/portfolio.png";
+import todoImg from "../assets/todo.png";
 import secondProjectImg from "../assets/project2.png";
 import thirdProjectImg from "../assets/project3.png";
 import carBarrierImg from "../assets/project4.png";
@@ -16,42 +17,50 @@ const Projects = () => {
       img: portfolioImg,
       role: "Frontend Developer | React Enthusiast",
       tools: ["React", "JavaScript", "GitHub"],
-      desc: "A personal portfolio showcasing my frontend development skills with React, smooth scrolling navigation, and responsive design."
+      desc: "A personal portfolio website highlighting  skills with React and a clean interface. It features smooth scrolling navigation and a fully responsive design to provide an engaging user experience across all devices."
     },
     {
       id: 2,
+      title: "Todo App",
+      img: todoImg,
+      role: "FullStack Developer | React | Supabase",
+      tools: ["React", "JavaScript", "Supabase", "Vite"],
+      desc: "A full-stack Todo application featuring secure user authentication and responsive design. It supports real-time CRUD operations, allowing users to efficiently manage their tasks anytime, anywhere."
+    },
+    {
+      id: 3,
       title: "Hostel Management System",
       img: secondProjectImg,
       role: "Coding",
       tools: ["C++"],
-      desc: "A web-based system to manage hostel operations, including room allocation, student management, and fee tracking with secure authentication."
+      desc: "A web-based system designed to streamline hostel operations with features like room allocation, student management. It also secure authentication to ensure data privacy and efficient control for admin and students"
     },
     {
-      id: 3,
+      id: 4,
       title: "Final Year Project",
       img: thirdProjectImg,
       role: "Team Lead | Software Engineer",
       tools: ["React", "Django", "REST API", "PostgreSQL"],
-      desc: "An AI-powered web app built as a final year project, focusing on intelligent recommendations and user-friendly dashboards."
+      desc: "An AI-powered web application developed as a final year project, designed to deliver intelligent recommendations and insights. It features user-friendly dashboards that make data visualization and decision-making"
     },
     {
-      id: 4,
+      id: 5,
       title: "Car Barrier System",
       img: carBarrierImg,
       role: "IoT Developer",
       tools: ["Arduino", "C++", "Sensors", "Motor Driver","Jumper-Wires"],
-      desc: "An IoT-based smart car barrier system using Arduino and sensors to automate vehicle access management in parking lots."
+      desc: "An IoT-based smart car barrier system built with Arduino and sensors. It enhances parking efficiency by enabling automatic entry and exit control without manual intervention.."
     },
     {
-      id: 5,
+      id: 6,
       title: "Obstacle Avoidence",
       img: obstacleImg,
       role: "IoT Developer",
       tools: ["Arduino UNO", "IR Sensors", "Motor Driver (L298N)", "DC Motors"],
-      desc: "An IoT-powered track detection and obstacle avoidance car designed to sense paths using IR sensors and move accordingly"
+      desc: "An IoT-powered track detection and obstacle avoidance car designed to sense paths using IR sensors and move accordingly It demonstrates autonomous movement by avoiding obstacles in real-time"
     },
     {
-      id: 6,
+      id: 7,
       title: "Ecommerce Website",
       img: ecomrcImg,
       role: "Frontend Web Developer",

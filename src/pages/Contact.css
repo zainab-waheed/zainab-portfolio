@@ -1,7 +1,7 @@
 :root {
   --purple: purple;
   --purple-light: rgba(106, 13, 173, 0.08);
-  --text-dark: #222;
+  --text-dark: green;
   --muted: yellowgreen;
 } /* Container with 2 columns, no center alignment of whole content */
 .contact-container {
@@ -9,7 +9,6 @@
   justify-content: space-between; /* dono columns ke darmiyan max space */
   align-items: flex-start;
   padding: 120px 0; /* top bottom padding */
-  background-color: #fff;
   color: var(--text-dark);
   max-width: 1265px; /* width adjust kar sakte hain */
 } /* Left Side */
@@ -23,7 +22,7 @@
   font-size: 2.5rem;
   color: var(--purple);
   margin-bottom: 10px;
-  margin-top: 0; /* top margin hata diya taake header se gap consistent rahe */
+  margin-top: 5px; /* top margin hata diya taake header se gap consistent rahe */
 }
 .contact-info h3 {
   font-size: 1.2rem;
@@ -64,17 +63,17 @@
 }
 .contact-form input:focus,
 .contact-form textarea:focus {
-  caret-color: #7b2ff7;
-  box-shadow: 0 0 5px var(--purple-light);
+  caret-color: white;
+  box-shadow: purple;
 }
 .contact-form button {
-  background: linear-gradient(90deg, #7b2ff7,#4ade80, #f107a3);
+  background: linear-gradient(90deg,#f107a3, #7b2ff7);
   color: black;
   border: none;
   padding: 10px;
   cursor: pointer;
   border-radius: 4px;
-  transition: background-color 0.2s ease;
+  transition: all 0.3s ease;
   width: 30%;
   display: inline-flex;     /* text + icon ek line me */
   align-items: center;      /* vertically center */
@@ -83,28 +82,31 @@
   font-weight: 600;
 }
 .contact-form button:hover {
-  background-color: #500a8f;
-} 
+  background: linear-gradient(90deg, #7b2ff7, #f107a3); /* gradient swap */
+  color: white; /* optional text color change */
+  transform: scale(1.05); /* slight zoom effect */
+}
 
 /* Vertical stack wrapper for icon-email and icon-social rows */
 .icon-email-wrapper {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 1px;
   margin-top: 20px;
 } /* Each horizontal row: icon + link(s) aligned */
 .icon-row {
   display: flex; /* vertical center alignment */
   gap: 30px;
+  align-items: center;
+  margin-bottom: 15px;
 } /* Icon style with white fill and purple border */
 .icon-with-border {
-  color: palevioletred; 
+  color: skyblue; 
   border-radius: 4px;
   padding: 6px;
   font-size: 1.5rem;
   box-sizing: content-box;
   cursor: pointer;
-  transition: background-color 0.3s ease;
 } /* Email link styling */
 .email-link {
   color: var(--purple);
@@ -117,7 +119,8 @@
   text-decoration: underline;
 }
 .location-icon {
-  color: palevioletred;
+  color: skyblue;
+
 }
 
 .location-text {
@@ -202,11 +205,15 @@
 .contact-info h3,
 .email-link,
 .social-icons a,
-.contact-form textarea,
-.contact-form input,
 .location-text,
 .icon-with-border {
   background: linear-gradient(90deg, #ff6ec4, #7873f5, #4ade80);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+.contact-form input,
+.contact-form textarea {
+  color: white !important;
+  background: transparent;
+}
+

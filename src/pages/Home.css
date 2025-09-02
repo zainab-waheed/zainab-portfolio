@@ -48,10 +48,10 @@
 .icons a {
   font-size: 32px;
   margin-right: 15px;
-  color: gold;
+  color: skyblue;
 }
 .icons a:hover {
-  color: yellow; /* Darker purple on hover */
+  color: #7873f5; /* Darker purple on hover */
   transform: scale(1.1); /* Slightly enlarge on hover */
   transition: color 0.3s ease, transform 0.3s ease;
 }
@@ -96,7 +96,7 @@
 
 /* Image */
 .right img {
-  width: 400px;
+  width: 500px;
   padding-right: 30px;
   border-radius: 50%;
   box-shadow: 0 0 10px rgba(0,0,0,0.1);

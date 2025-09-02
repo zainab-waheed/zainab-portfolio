@@ -68,11 +68,11 @@
   font-size: 28px;
   transition: color 0.3s ease;
   margin: 0 6px;                /* extra margins hatao */
-  color: yellowgreen !important;
+  color: palevioletred !important;
 }
 
 .social-icons a:hover {
-  color: yellow !important;
+  color: #7873f5 !important;
 }
 
 
