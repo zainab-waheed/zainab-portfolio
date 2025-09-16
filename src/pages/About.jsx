@@ -42,8 +42,8 @@ const About = () => {
 
         {/* Download CV Button */}
         <a
-          href="/Zainab(cv).pdf" // public folder me CV ka naam yeh rakho
-          download="Zainab(cv).pdf"
+          href="/ZainabWaheed-CV.pdf" // public folder me CV ka naam yeh rakho
+          download="ZainabWaheed-CV.pdf"
           target="_blank"
           rel="noreferrer"
           className="cv-button"
